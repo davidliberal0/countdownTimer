@@ -21,6 +21,8 @@ public class Main {
                     timer.cancel();
                 }
             }
-        }; 
+        };
+
+        timer.scheduleAtFixedRate(task, 0, 1000); // (Task, Delay, Period)
     }
 }

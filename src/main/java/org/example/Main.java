@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -9,9 +10,13 @@ public class Main {
     static void main() {
         // Java Countdown Timer Program
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of seconds to countdown from: ");
+        int response = scanner.nextInt();
+
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
-            int count = 5;
+            int count = response;
             @Override
             public void run() {
                 System.out.println(count);
